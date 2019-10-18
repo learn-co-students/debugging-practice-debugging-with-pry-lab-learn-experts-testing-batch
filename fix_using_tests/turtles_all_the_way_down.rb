@@ -10,6 +10,11 @@ end
 
 def turtle_traits(turtles)
   turtles.map do |turtle|
+    #binding.pry
+    if !turtle[:traits].kind_of?(Array)
+      turtle[:traits] = [turtle[:traits]]
+    end
+    
     turtle[:traits].each do |trait|
       trait
     end
